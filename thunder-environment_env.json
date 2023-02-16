@@ -1,0 +1,16 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "env",
+    "dateExported": "2023-02-16T04:12:49.263Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "base_url",
+            "value": "http://127.0.0.1:8000/"
+        },
+        {
+            "name": "auth",
+            "value": "27|xEQNYcxcZOaTR2yCPi8aF7GhbDSdSPZiUn5PrCba"
+        }
+    ]
+}

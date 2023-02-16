@@ -1,0 +1,191 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "api_rest",
+    "dateExported": "2023-02-16T04:12:37.098Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
+            "name": "animals",
+            "containerId": "",
+            "created": "2023-02-16T01:07:37.937Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "d7a58870-d645-4f9a-982d-bd0dba737aba",
+            "name": "users",
+            "containerId": "",
+            "created": "2023-02-16T01:07:41.888Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "553e0ca9-117c-4d81-9978-6cf0ee79c5a7",
+            "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
+            "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
+            "name": "GET all",
+            "url": "{{base_url}}animals?page=2",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-02-16T01:07:51.904Z",
+            "modified": "2023-02-16T04:12:25.808Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "bd8b405f-3cf3-4e30-be7f-06132bfaa2b3",
+            "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
+            "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
+            "name": "GET id",
+            "url": "{{base_url}}animals/69",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2023-02-16T04:11:15.558Z",
+            "modified": "2023-02-16T04:11:45.000Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "6a3461f5-3007-4c80-aefe-bde40b61cb6d",
+            "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
+            "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
+            "name": "GET filters",
+            "url": "{{base_url}}animals/filter/umb",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-02-16T01:09:30.756Z",
+            "modified": "2023-02-16T03:56:55.833Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "504e7e27-7663-42bd-bcc3-7da3f16f3104",
+            "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
+            "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
+            "name": "POST",
+            "url": "{{base_url}}animals",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-02-16T01:10:22.154Z",
+            "modified": "2023-02-16T03:51:51.707Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"sound\": \"Miauu\",\n  \"name\": \"Gatooo\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "36333c4b-fa50-47d6-a351-f575bf43e155",
+            "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
+            "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
+            "name": "PUT",
+            "url": "{{base_url}}animals/69",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-02-16T01:11:11.479Z",
+            "modified": "2023-02-16T04:10:53.955Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"sound\": \"test\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d6b8e2b7-61e5-47ec-a891-bb220f4d99b5",
+            "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
+            "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
+            "name": "DELETE",
+            "url": "{{base_url}}animals/93",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-02-16T01:12:01.405Z",
+            "modified": "2023-02-16T03:52:02.554Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d204c70f-e2ce-4d49-ae3d-32935d941523",
+            "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
+            "containerId": "d7a58870-d645-4f9a-982d-bd0dba737aba",
+            "name": "LOGIN",
+            "url": "{{base_url}}users/login",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-02-16T01:12:26.636Z",
+            "modified": "2023-02-16T02:08:55.526Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"test@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "828d7c4f-9a9e-48fa-866f-e206b76c2a3c",
+            "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
+            "containerId": "d7a58870-d645-4f9a-982d-bd0dba737aba",
+            "name": "REGISTER",
+            "url": "{{base_url}}users/register",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-02-16T01:13:05.452Z",
+            "modified": "2023-02-16T02:08:47.061Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"test@gmail.coma\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
