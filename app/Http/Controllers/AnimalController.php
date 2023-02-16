@@ -70,11 +70,18 @@ class AnimalController extends Controller
     public function filter(string $sound)
     {
         try {
-            $animal = Animal::whereRaw('LOWER(`sound`) like ?', ['%'.strtolower($sound).'%'])->first();
-            if(!$animal){
-                return response()->json(['Message' => 'Not found'], 404);
+
+            $animals = Animal::whereRaw('LOWER(sound) LIKE ?', ['%'.strtolower($sound).'%'])->get();
+
+            $animalResources = array_map(function ($animal) {
+                return new AnimalsResource($animal);
+            }, $animals->all());
+
+            if(sizeof($animals, 0) == 0){
+                return response()->json(['Message' => 'No animals found'], 404);
             }
-            return new AnimalsResource($animal);
+
+            return response()->json($animalResources);
         } catch(\Exception $e){
             return response()->json(['Message' => $e], 500);
         }
