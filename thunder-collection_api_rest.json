@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "api_rest",
-    "dateExported": "2023-02-16T04:12:37.098Z",
+    "dateExported": "2023-02-17T07:31:25.300Z",
     "version": "1.1",
     "folders": [
         {
@@ -25,24 +25,18 @@
             "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
             "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
             "name": "GET all",
-            "url": "{{base_url}}animals?page=2",
+            "url": "{{base_url}}animals",
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-02-16T01:07:51.904Z",
-            "modified": "2023-02-16T04:12:25.808Z",
+            "modified": "2023-02-16T04:54:29.394Z",
             "headers": [
                 {
                     "name": "Accept",
                     "value": "application/json"
                 }
             ],
-            "params": [
-                {
-                    "name": "page",
-                    "value": "2",
-                    "isPath": false
-                }
-            ],
+            "params": [],
             "auth": {
                 "type": "bearer",
                 "bearer": "{{auth}}"
@@ -54,12 +48,17 @@
             "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
             "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
             "name": "GET id",
-            "url": "{{base_url}}animals/69",
+            "url": "{{base_url}}animals/123",
             "method": "GET",
             "sortNum": 15000,
             "created": "2023-02-16T04:11:15.558Z",
-            "modified": "2023-02-16T04:11:45.000Z",
-            "headers": [],
+            "modified": "2023-02-17T07:27:31.200Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
             "auth": {
                 "type": "bearer",
@@ -72,13 +71,24 @@
             "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
             "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
             "name": "GET filters",
-            "url": "{{base_url}}animals/filter/umb",
+            "url": "{{base_url}}animals/filter/a?page=1",
             "method": "GET",
             "sortNum": 20000,
             "created": "2023-02-16T01:09:30.756Z",
-            "modified": "2023-02-16T03:56:55.833Z",
-            "headers": [],
-            "params": [],
+            "modified": "2023-02-17T06:51:51.685Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
             "auth": {
                 "type": "bearer",
                 "bearer": "{{auth}}"
@@ -94,12 +104,17 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-02-16T01:10:22.154Z",
-            "modified": "2023-02-16T03:51:51.707Z",
-            "headers": [],
+            "modified": "2023-02-17T06:54:30.580Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"sound\": \"Miauu\",\n  \"name\": \"Gatooo\"\n}",
+                "raw": "{\n  \"sound\": \"Miauu\",\n  \"name\": \"Gatco\"\n}",
                 "form": []
             },
             "auth": {
@@ -113,16 +128,21 @@
             "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
             "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
             "name": "PUT",
-            "url": "{{base_url}}animals/69",
+            "url": "{{base_url}}animals/5454",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2023-02-16T01:11:11.479Z",
-            "modified": "2023-02-16T04:10:53.955Z",
-            "headers": [],
+            "modified": "2023-02-17T07:31:00.422Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"sound\": \"test\"\n}",
+                "raw": "{\n  \"sound\": \"teste\"\n}",
                 "form": []
             },
             "auth": {
@@ -136,12 +156,17 @@
             "colId": "10b9d143-bcff-47bb-a015-7473ca00192c",
             "containerId": "ec99b527-2989-45a9-95a5-3e84f8d4613a",
             "name": "DELETE",
-            "url": "{{base_url}}animals/93",
+            "url": "{{base_url}}animals/145",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2023-02-16T01:12:01.405Z",
-            "modified": "2023-02-16T03:52:02.554Z",
-            "headers": [],
+            "modified": "2023-02-17T06:34:37.177Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
             "auth": {
                 "type": "bearer",
@@ -158,8 +183,13 @@
             "method": "POST",
             "sortNum": 60000,
             "created": "2023-02-16T01:12:26.636Z",
-            "modified": "2023-02-16T02:08:55.526Z",
-            "headers": [],
+            "modified": "2023-02-17T06:34:45.254Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
@@ -177,8 +207,13 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-02-16T01:13:05.452Z",
-            "modified": "2023-02-16T02:08:47.061Z",
-            "headers": [],
+            "modified": "2023-02-17T06:34:58.176Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
