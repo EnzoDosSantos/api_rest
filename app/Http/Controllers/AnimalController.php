@@ -7,6 +7,7 @@ use App\Http\Resources\AnimalsResource;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class AnimalController extends Controller
 {
@@ -70,20 +71,31 @@ class AnimalController extends Controller
     public function filter(string $sound)
     {
         try {
+            $animals = Animal::whereRaw('LOWER(sound) LIKE ?', ['%'.strtolower($sound).'%'])->paginate(10);
 
-            $animals = Animal::whereRaw('LOWER(sound) LIKE ?', ['%'.strtolower($sound).'%'])->get();
-
-            $animalResources = array_map(function ($animal) {
-                return new AnimalsResource($animal);
-            }, $animals->all());
-
-            if(sizeof($animals, 0) == 0){
+            if($animals->isEmpty()){
                 return response()->json(['Message' => 'No animals found'], 404);
             }
 
-            return response()->json($animalResources);
+            $animalResources = array_map(function ($animal) {
+                return new AnimalsResource($animal);
+            }, $animals->items());
+
+            return response()->json([
+                'data' => $animalResources,
+                'meta' => [
+                    'current_page' => $animals->currentPage(),
+                    'from' => $animals->firstItem(),
+                    'last_page' => $animals->lastPage(),
+                    'links' => $animals->links()->elements,
+                    'path' => $animals->url($animals->currentPage()),
+                    'per_page' => $animals->perPage(),
+                    'to' => $animals->lastItem(),
+                    'total' => $animals->total(),
+                ],
+            ]);
         } catch(\Exception $e){
-            return response()->json(['Message' => $e], 500);
+            return response()->json(['Message' => $e->getMessage()], 500);
         }
     }
 
