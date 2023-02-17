@@ -102,12 +102,12 @@ class AnimalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Animal $animal)
+    public function update(Request $request, string $id)
     {
         try {
-            $animal = Animal::where('id', $animal['id'])->first();
+            $animal = Animal::where('id', $id)->first();
             if(!$animal){
-                return response()->json(['Messageeeeeeeeeee' => 'Not found'], 404);
+                return response()->json(['Message' => 'Not found'], 404);
             }
 
             if(!$request['name'] && !$request['sound']){
