@@ -1,0 +1,27 @@
+[
+       {"name": "Abeja", "sound": "Zumbido"},
+       {"name": "Abejorro", "sound": "Zumbido"},
+       {"name": "Asno", "sound": "Rebuzno"},
+       {"name": "Autillo", "sound": "Ululación"},
+       {"name": "Avispón", "sound": "Zumbido"},
+       {"name": "Babuino", "sound": "Chillido"},
+       {"name": "Ballena", "sound": "Canto"},
+       {"name": "Boa", "sound": "Siseo"},
+       {"name": "Bonobo", "sound": "Chillido"},
+       {"name": "Buey", "sound": "Mugido"},
+       {"name": "Búho", "sound": "Ululación"},
+       {"name": "Caballo", "sound": "Relincho"},
+       {"name": "Cabra", "sound": "Balido"},
+       {"name": "Chacal", "sound": "Aullido"},
+       {"name": "Ciervo", "sound": "Balido"},
+       {"name": "Cigarra", "sound": "Chirrido"},
+       {"name": "Cigüeña", "sound": "Crotoreo"},
+       {"name": "Codorniz", "sound": "Cacareo"},
+       {"name": "Cuervo", "sound": "Graznido"},
+       {"name": "Elefante", "sound": "Barrito"},
+       {"name": "Gato", "sound": "Maullido"},
+       {"name": "Grillo", "sound": "Chirrido"},
+       {"name": "Jirafa", "sound": "Ronquido"},
+       {"name": "Lobo", "sound": "Aullido"}
+
+]
